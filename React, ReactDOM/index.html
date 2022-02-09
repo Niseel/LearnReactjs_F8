@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn React</title>
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+  </head>
+  <body>
+    <h2>Xin Chao cac ban</h2>
+
+    <script>
+      //DOM
+      const divDOM = document.createElement("div");
+      divDOM.title = "Hoc-Reactjs";
+      divDOM.innerText = "Học reactjs tại F8";
+
+      const pDOM = document.createElement("p");
+      pDOM.innerText = "Mot hai ba bon nam";
+
+      divDOM.appendChild(pDOM);
+      document.body.appendChild(divDOM);
+
+      //React
+      const divReact = React.createElement(
+        "div",
+        {
+          title: "Hoc-Reactjs",
+        },
+        "Học reactjs tại F8",
+        React.createElement("p", null, "Mot hai ba bon nam")
+      );
+
+      console.log(divReact);
+    </script>
+  </body>
+</html>
+
+<!-- div clas pót-item
+h2 title học re
+p hoc
+/div -->
