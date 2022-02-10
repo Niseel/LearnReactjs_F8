@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn React</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+      const PostItem = function() {
+        return (
+          <div className="post-item">
+            <img
+              src="https://i.ytimg.com/vi/4WfPU2BxDfQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCwYazTYhaQRAOGjp_HfCq9llIvJA"
+              alt="Yugi-Oh Meta -- Custom"
+            />
+            <h2 className="post-title">Yugi-Oh Meta -- Custom</h2>
+            <p className="post-desc">Huong dan chi tiet ve Yugi-Oh Card game</p>
+          </div>
+        );
+      }
+
+      const app = (
+        <div className="post-list">
+          <PostItem />
+          <PostItem />
+          <PostItem />
+        </div>
+      );
+
+      // Get root element
+      const root = document.getElementById("root");
+
+      // // React-DOM --> render UI
+      ReactDOM.render(app, root);
+      console.log(app);
+    </script>
+  </body>
+</html>
