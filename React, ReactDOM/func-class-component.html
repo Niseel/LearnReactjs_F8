@@ -14,6 +14,7 @@
 
     <script type="text/babel">
 
+      // PostItem.js
       const PostItem = function() {
         return (
           <div className="post-item">
@@ -27,20 +28,20 @@
         );
       }
 
-      const app = (
-        <div className="post-list">
-          <PostItem />
-          <PostItem />
-          <PostItem />
-        </div>
-      );
+      // App.js
+      const App = function() {
+        return (
+          <div className="post-list">
+            <PostItem />
+            <PostItem />
+            <PostItem />
+          </div>
+        )
+      };
 
-      // Get root element
-      const root = document.getElementById("root");
-
-      // // React-DOM --> render UI
-      ReactDOM.render(app, root);
-      console.log(app);
+      // index.js
+      ReactDOM.render(<App />, document.getElementById("root"));
+      
     </script>
   </body>
 </html>
