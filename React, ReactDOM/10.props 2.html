@@ -14,6 +14,41 @@
 
     <script type="text/babel">
 
+
+      // Button.js
+      const Button = ({title, href, onClick}) => {
+        let Component = 'button'
+        const props = {}
+
+        if (href) {
+          Component = 'a'
+          props.href = href 
+        }
+
+        if (onClick) {
+          props.onClick = onClick
+        }
+        return (
+          <Component {...props}>{title}</Component>
+          // Tuong duong
+          //<Component onClick={onClick}>{title}</Component>
+        );
+      }
+      // App.js
+      const App = () => {
+        return (
+          <div className="wrapper">
+            <Button 
+              title="Click now"
+              href="https://fullstack.edu.vn/learning/reactjs?id=2739"
+              onClick={() => console.log(Math.random())}
+            />
+          </div>
+        );
+        // Code này có thể được dùng để thông kê lượt click vào trang nào đó
+      }
+      // // index.js 
+      ReactDOM.render(<App />, document.getElementById("root"))
     </script>
   </body>
 </html>
